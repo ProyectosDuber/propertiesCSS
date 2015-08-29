@@ -39,8 +39,15 @@ and open the template in the editor.
                $("#primer_parrafo").css("font-size",tamanoDef*2);
             }else if(fun.target==disminuir){
                 var tamanoDef = parseInt($("#primer_parrafo").css("font-size")) ;
+    
            
-               $("#primer_parrafo").css("font-size",tamanoDef/2);
+           
+           if(tamanoDef >8){
+                $("#primer_parrafo").css("font-size",tamanoDef*0.95);
+           }else{
+               alert("Tamaño minimo admitido");
+           }
+              
             }
         }
         
